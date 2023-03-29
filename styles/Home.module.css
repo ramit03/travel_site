@@ -6,6 +6,10 @@
   padding: 6rem;
   min-height: 100vh;
 }
+.cover{
+  background-image: url('../public//images/5.jpg');
+  background-size: cover;
+}
 
 .description {
   display: inherit;
