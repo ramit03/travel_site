@@ -48,7 +48,9 @@ export default function Header({ }: Props) {
           }}
           className='flex items-center justify-center'
         >
-        <h1 className='text-4xl text-blue-1 cursor-pointer font-bold md:text-4xl'>Tours and Travels</h1>
+        <Link href={'/'}>
+          <h1 className='text-4xl text-blue-1 cursor-pointer font-bold md:text-4xl'>Tours and Travels</h1>
+        </Link>
         </motion.div>
         <motion.div
           initial={{
@@ -65,8 +67,7 @@ export default function Header({ }: Props) {
             duration: 1.5,
           }}
           className='text-dark-blue-2 hidden text-xl md:inline-flex flex-row items-center gap-x-10'>
-          <Link href={''}>Sikkim</Link>
-          <Link href={''}>Darjeeling</Link>
+          <Link href={'/#destinations'}>Destinations</Link>
           <Link href={''}>Book Hotels</Link>
           <Link href={''}>Book a Taxi</Link>
 

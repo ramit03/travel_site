@@ -7,25 +7,25 @@ import cover from '../public/images/5.jpg'
 import Destinations from '@/components/Destinations'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Hotels from '@/components/Hotels'
+import { NextPage } from 'next'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+ const Home: NextPage=()=> {
   return (
-    <div className='flex flex-col'>
+    <div className={`flex flex-col h-screen overflow-x-hidden bg-lightest-blue ${styles.cover}`}>
       <Head>
         <title>Travel</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section id='header'>
-        <Header/>
-      </section>
+
       
-      <section id='body'>
-        <div className={`h-screen bg-center md:bg-center  flex w-screen ${styles.cover} overflow-hidden items-center pt-48 pb-32 justify-center flex-col `}>
+      <section id='body' className='snap-center'>
+        <div className={`h-screen bg-center md:bg-center  flex w-screen   overflow-hidden items-center pt-48 pb-32 justify-center flex-col `}>
           <motion.div animate={{y:[0,6,0]}} transition={{ duration:3,repeat: Infinity,ease:'easeInOut' }}
-            className='text-6xl font-bold flex w-full text-center justify-center  font-mont text-white'>Welcome to Tours and Travels!</motion.div>
+            className='text-6xl font-bold flex w-full text-center justify-center  mont-text text-white'>Welcome to Tours and Travels!</motion.div>
           <div className='flex flex-col items-center justify-end w-full h-full '>
             <div className='text-2xl ml-4 md:w-[40%] w-2/3 lg:ml-40 align-bottom backdrop-blur-sm lg:backdrop-blur-[1px]  bg-lightest-blue/10 px-6 py-4 rounded-lg font-sans text-white'>
               We offer unforgettable experiences in Sikkim and Darjeeling. <br/>
@@ -45,7 +45,12 @@ export default function Home() {
       <section id='destinations'>
         <Destinations/>
       </section>
+      <section id='hotels'>
+        <Hotels/>
+      </section>
       
     </div>
-  )
-}
+  );
+};
+
+export default Home;

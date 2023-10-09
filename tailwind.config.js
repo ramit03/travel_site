@@ -14,6 +14,10 @@ module.exports = {
         'neutral-3': '#BCCCDC',
         'teal-1':'#5FE3C0'
       },
+      fontFamily: {
+        sans: []
+
+      },
       screens:{
         'md':'910px'
       }
